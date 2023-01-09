@@ -1,0 +1,83 @@
+.navbarMenuLinks, .navbarMenu, .navbarLogo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  background-color: rgb(97, 218, 231);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+}
+.navbarLogo {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .navbarIcon {
+    color: dark;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .navbarIcon {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+  }
+}
+.navbarMenu {
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .navbarMenu {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .navbarMenu {
+    position: absolute;
+    top: 22px;
+    right: 50px;
+  }
+}
+.navbarMenuLinks {
+  color: black;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+.navbarMenuLinks:hover {
+  color: orangered;
+  transition: all 0.3s ease;
+}
+.navbarMenu #btn {
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: orangered;
+  margin: 0px 15px;
+  color: white;
+}
+.navbarMenu #btn:hover {
+  background-color: #00cc66;
+  padding: 12px 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */

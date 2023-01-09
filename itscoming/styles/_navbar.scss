@@ -1,0 +1,89 @@
+
+@import "colors";
+@import "mediaQuaries";
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    background-color: $info;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: relative;
+
+    &Logo {
+        color: $dark;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 2rem;
+        @extend %align-center;
+    }
+
+    &Icon{
+        @include small {
+            color:dark;
+            position:absolute;
+            top:22px;
+            right: 20px;
+        }
+
+        @include bigger{
+            position: absolute;
+            top:22px;
+            right: 20px;
+        }
+    }
+
+    &Menu{
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 2rem;
+        gap: 1rem;
+
+        @include small {
+            display: none;
+        }
+
+        @include bigger{
+            position: absolute;
+            top:22px;
+            right: 50px;
+        }
+
+        &Links {
+            color:$dark;
+            @extend %align-center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0.5rem;
+            font-size: 1.1rem;
+
+            &:hover{
+                color: $error;
+                transition: all 0.3s ease;
+            }
+        }
+
+        #btn {
+            padding:12px 24px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background-color: $error;
+            margin: 0px 15px;
+            color: $light;
+
+            &:hover{
+                background-color: $slime;
+                padding: 12px 40px;
+              
+            }
+        }
+    }
+}
