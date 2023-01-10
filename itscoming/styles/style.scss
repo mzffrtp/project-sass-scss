@@ -7,3 +7,100 @@
 }
 
 // Hero section CSS
+.hero {
+    background-color: lavender;
+
+    &Container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        max-width: 1200px;
+        padding: 0px 24px;
+
+        @include small {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        &Left {
+            width: 100%;
+            line-height: 2rem;
+
+            @include small {
+                padding: 5rem 0;
+            }
+
+            @include bigger {
+                line-height: 3rem;
+            }
+
+            h1 {
+                font-size: 4rem;
+                color: $slime;
+
+                @include bigger {
+                    font-size: 2.5rem;
+                }
+            }
+
+            h2 {
+                font-size: 3rem;
+                color: $info;
+                margin-top: 1.5rem;
+
+                @include bigger {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                font-size: 2rem;
+                color: $error;
+                margin-top: 1.2rem;
+
+                @include bigger {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &Btn {
+                font-size: 1.5rem;
+                background-color: $slime;
+                padding: 14px 32px;
+                border: none;
+                border-radius: 10px;
+                margin-top: 2rem;
+                cursor: progress;
+                outline: none;
+                color: whitesmoke;
+
+                &:hover {
+                    padding: 14px 45px;
+                    background-color: $error;
+                    color: $dark;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: whitesmoke;
+                    z-index: 2;
+                }
+            }
+        }
+
+        &Right{
+            text-align: center;
+
+            &Img{
+                height: 600px;
+                width: 600px;
+            }
+        }
+
+        
+    }
+}
